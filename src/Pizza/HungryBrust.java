@@ -29,6 +29,28 @@ public class HungryBrust extends Pizza {
 		return ;
 	}
 	
+	//input for section of Pizza
+		public products selectedPizza(Boolean isVeg) {
+			System.out.println("I am in Selected Pizza");
+			Scanner sc = new Scanner(System.in);
+			int pizzaNumber = sc.nextInt();
+			products prod = new products();
+			if(isVeg) {
+				prod.product = VegPizza[pizzaNumber-1];
+			} else {
+				prod.product = NonVegPizza[pizzaNumber-1];
+			}
+			System.out.println("1. Medium\t2. Large");
+			int sizeofPizza = sc.nextInt();
+			if(sizeofPizza == 1)
+				prod.price = mediumBasePrice;
+			else
+				prod.price = largeBasePrice;
+			
+			sc.close();
+			return prod;
+		}
+	
 	// Size of the Pizza
 	public int selectSize() {
 		Scanner sc = new Scanner(System.in);

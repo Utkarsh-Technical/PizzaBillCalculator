@@ -46,7 +46,7 @@ public class Pizza {
 		System.out.println("Add Ons:");
 		products prod = new products();
 		for(int i=0; i<addOns.length; i++) {
-			System.out.println((i+1) + ":\t" + (addOns[i]));
+			System.out.println("\t"+(i+1) + ": " + (addOns[i]));
 		}
 		int idx = sc.nextInt();
 		prod.product = addOns[idx-1];
@@ -60,7 +60,7 @@ public class Pizza {
 		System.out.println("Drinks:");
 		products prod = new products();
 		for(int i=0; i<drinks.length; i++) {
-			System.out.println((i+1) + ":\t" + (drinks[i]));
+			System.out.println("\t"+(i+1) + ": " + (drinks[i]));
 		}
 		int idx = sc.nextInt();
 		prod.product = drinks[idx-1];
@@ -68,5 +68,7 @@ public class Pizza {
 		sc.close();
 		return prod;
 	}
+	
+	
 	
 }
